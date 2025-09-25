@@ -13,7 +13,7 @@ public class Exercicio2 {
         System.out.print("Digite um numero e descubra se é primo ou não: ");
         int numero = scanner.nextInt();
         boolean isPrimo = false;
-        //IDEALMENTE DEVERIAMOS TESTAR O RESTO DA DIVISAO DO PROPRIO NUMERO ATE O NUMERO 1,
+        //IDEALMENTE DEVERIAMOS TESTAR O RESTO DA DIVISAO DO PROPRIO NUMERO ATE O NUMERO 1, UTILIZANDO LOOP
         //POIS O NUMERO 1 SOH EH DIVISIVEL POR 1 E POR ELE MESMO, SOMENTE
         if (numero < 4) {
             isPrimo = (numero < 4);
