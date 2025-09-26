@@ -12,14 +12,14 @@ public class Exercicio5 {
         System.out.print("Digite um numero: ");
         int numero = scanner.nextInt();
 
-        if (numero < 0) {
+        if (numero > 0) {
+            System.out.printf("O número digitado %d é positivo!", numero);
+        }
+        else if (numero < 0) {
             System.out.printf("O número %d é negativo!", numero);
         }
-        else if (numero == 0) {
-            System.out.printf("O número digitado é zero!");
-        }
         else {
-            System.out.printf("O número digitado %d é positivo!", numero);
+            System.out.printf("O número digitado é zero!");
         }
         scanner.close();
     }

@@ -12,17 +12,20 @@ public class Exercicio1 {
 
         System.out.print("Digite um numero e descubra se é par ou ímpar: ");
         int numero = scanner.nextInt();
-        boolean isPar = numero % 2 == 0;
+        // int restoDaDivisaoInteira = numero % 2;
 
-        if (isPar) {
+        boolean isPar = numero % 2 == 0;
+        // boolean isPar = restoDaDivisaoInteira == 0;
+
+        if (isPar == true) {
             System.out.printf("O número %d é par", numero);
         }
         else {
             System.out.printf("O número %d é ímpar", numero);
         }
-        
+
         //ou
-        System.out.println("\nO numero " + numero + " é: " + ((isPar) ? "par" : "ímpar"));
+        System.out.println("\nO numero " + numero + " é: " + ((isPar == true) ? "par" : "ímpar"));
         scanner.close();
     }
 }

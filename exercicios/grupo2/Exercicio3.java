@@ -16,7 +16,6 @@ public class Exercicio3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Digite um numero e descubra se é divisivel por 3: ");
         int numero = scanner.nextInt();
         boolean isDivisivelPor3 = numero != 0 && isDivisivelPorN(numero, 3);

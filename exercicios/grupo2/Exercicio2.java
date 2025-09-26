@@ -16,14 +16,18 @@ public class Exercicio2 {
         //IDEALMENTE DEVERIAMOS TESTAR O RESTO DA DIVISAO DO PROPRIO NUMERO ATE O NUMERO 1, UTILIZANDO LOOP
         //POIS O NUMERO 1 SOH EH DIVISIVEL POR 1 E POR ELE MESMO, SOMENTE
         if (numero < 4) {
-            isPrimo = (numero < 4);
+            isPrimo = true;
         }
         else {
-            //maior que 3 ou se for divisivel nem por 2 e nem por 3, é primo
-            isPrimo = (numero % 2 != 0) && (numero % 3 != 0);
+            //maior que 3 ou se for divisivel nem por 2 e nem por 3 e nem por 5 e nem por 7, é primo
+            boolean naoEhDivisivelPor2 = (numero % 2 != 0);
+            boolean naoEhDivisivelPor3 = (numero % 3 != 0);
+            boolean naoEhDivisivelPor5 = (numero % 5 != 0);
+            boolean naoEhDivisivelPor7 = (numero % 7 != 0);
+            isPrimo = ((naoEhDivisivelPor2 == true) && (naoEhDivisivelPor3 == true) && (naoEhDivisivelPor5 == true) && (naoEhDivisivelPor7 == true));
         }
 
-        if (isPrimo) {
+        if (isPrimo == true) {
             System.out.printf("O número %d é primo", numero);
         }
         else {
@@ -31,7 +35,7 @@ public class Exercicio2 {
         }
         
         //ou
-        System.out.println("\nO numero " + numero + ((isPrimo) ? " é primo" : " não é primo"));
+        System.out.println("\nO numero " + numero + ((isPrimo == true) ? " é primo" : " não é primo"));
         scanner.close();
     }
 }

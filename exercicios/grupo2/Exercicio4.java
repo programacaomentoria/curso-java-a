@@ -11,27 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Exercicio4 {
-    public static void main(String[] args) {
-        //data atual
-        LocalDate currentDate = LocalDate.now();
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Olá!! Digite o seu dia de nascimento: ");
-        String dtNascimento = scanner.nextLine();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dtNascimentoAsDate = LocalDate.parse(dtNascimento, formatter);
-        boolean mesmoDiaDeNascimento = currentDate.getDayOfMonth() == dtNascimentoAsDate.getDayOfMonth();
-        boolean mesmoMesDeNascimento = currentDate.getMonthValue() == dtNascimentoAsDate.getMonthValue();
-
-        if (mesmoDiaDeNascimento && mesmoMesDeNascimento) {
-            System.out.println("Feliz Aniversário!!");
-        } else {
-            System.out.println("Hoje é dia " + currentDate.getDayOfMonth() + " de " + getMonthNameByMonthNumber(currentDate.getMonthValue()) + " de " + currentDate.getYear());
-        }
-
-        scanner.close();
-    }
-    
     public static String getMonthNameByMonthNumber(int monthNumber) {
         String monthName;
         switch (monthNumber) {
@@ -76,4 +55,32 @@ public class Exercicio4 {
         }
         return monthName;
     }
+
+    public static void main(String[] args) {
+        
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Olá!! Digite a sua data de nascimento: ");
+        String dtNascimento = scanner.nextLine();
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dtNascimentoAsDate = LocalDate.parse(dtNascimento, formatter);
+
+        //data atual
+        LocalDate currentDate = LocalDate.now();
+        boolean mesmoDiaDeNascimento = currentDate.getDayOfMonth() == dtNascimentoAsDate.getDayOfMonth();
+        boolean mesmoMesDeNascimento = currentDate.getMonthValue() == dtNascimentoAsDate.getMonthValue();
+
+        if (mesmoDiaDeNascimento && mesmoMesDeNascimento) {
+            System.out.println("Feliz Aniversário!!");
+        } 
+        else {
+            System.out.println("Hoje é dia " + currentDate.getDayOfMonth() + " de " + getMonthNameByMonthNumber(currentDate.getMonthValue()) + " de " + currentDate.getYear());
+        }
+
+        scanner.close();
+    }
+    
+    
 }
