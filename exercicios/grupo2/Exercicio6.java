@@ -5,7 +5,7 @@
  */
 package exercicios.grupo2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Exercicio6 {
     public static void main(String[] args) {
@@ -26,9 +26,10 @@ public class Exercicio6 {
         else if(idade >= 60) {
             System.out.println("Idosa");
         }
-        else{
+        else {
             System.out.println("Idade inválida");
         }
+
         scanner.close();
     }
 }

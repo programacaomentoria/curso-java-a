@@ -20,47 +20,21 @@ public class Exercicio7 {
         System.out.println("\t6 - Sábado");
         System.out.println("\t7 - Domingo");
         int diaDaSemana = scanner.nextInt();
-        String diaDaSemanaDigitado;
+        String diaDaSemanaDigitado = getWeekdayNameByNumber(diaDaSemana);
         //logica, usa o switch no proprio codigo ou
         //usando um método para "calcular a data da semana" getWeekdayNameByNumber(diaDaSemana)
 
-        switch (diaDaSemana) {
-        case 1:
-            diaDaSemanaDigitado = "Segunda-feira";
-            break;
-        case 2:
-            diaDaSemanaDigitado = "Terça-feira";
-            break;
-        case 3:
-            diaDaSemanaDigitado = "Quarta-feira";
-            break;
-        case 4:
-            diaDaSemanaDigitado = "Quinta-feira";
-            break;
-        case 5:
-            diaDaSemanaDigitado = "Sexta-feira";
-            break;
-        case 6:
-            diaDaSemanaDigitado = "Sábado";
-            break;
-        case 7:
-            diaDaSemanaDigitado = "Domingo";
-            break;
-        default:
-            diaDaSemanaDigitado = "";
-        }
-
-        if (diaDaSemanaDigitado != "") {
-            System.out.println("O dia da semana escolhido foi " + diaDaSemanaDigitado);
+        if(diaDaSemanaDigitado.equals("")){
+           System.out.println("Dia Inválido!!");
         }
         else {
-            System.out.println("Dia Inválido!!");
+            System.out.println("O dia da semana escolhido foi " + diaDaSemanaDigitado);
         }
         
 
         scanner.close();
     }
-    /*
+    
     public static String getWeekdayNameByNumber(int number) {
         String weekdayName;
         switch (number) {
@@ -90,5 +64,5 @@ public class Exercicio7 {
         }
         return weekdayName;
     }
-    */
+    
 }
