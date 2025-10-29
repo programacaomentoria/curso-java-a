@@ -3,7 +3,7 @@
  * em seguida, imprima todos os elementos do vetor.
  * @author: Rodrigo Fischer (programacao.mentoria)
  */
-package exercicios.grupo4;
+package exercicios.grupo4_1;
 
 import java.util.Scanner;
 

@@ -1,0 +1,5 @@
+Olá mundo.
+Sou eu, o Java!
+
+
+Hoje é dia 28/10/2025
