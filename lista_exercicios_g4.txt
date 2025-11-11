@@ -1,0 +1,25 @@
+1	4	Preencher e Imprimir Vetor: Crie um vetor de 5 posições. Peça ao usuário para preencher cada posição com um número inteiro e, em seguida, imprima todos os elementos do vetor.
+2	4	Soma dos Elementos do Vetor: Dado um vetor de 10 números inteiros, calcule e imprima a soma de todos os seus elementos.
+3	4	Média dos Elementos do Vetor: Crie um vetor de 8 números decimais. Calcule e imprima a média aritmética desses elementos.
+4	4	Cópia de Vetor: Declare um vetor A com 7 números inteiros. Crie um segundo vetor B do mesmo tamanho e copie todos os elementos de A para B. Imprima B.
+5	4	Inverter Ordem do Vetor: Dado um vetor de 6 elementos, crie um novo vetor ou modifique o original para que seus elementos fiquem em ordem inversa. Imprima o vetor resultante.
+6	4	Contar Pares e Ímpares no Vetor: Crie um vetor de 10 números inteiros. Percorra o vetor e conte quantos números são pares e quantos são ímpares. Imprima as contagens.
+7	4	Encontrar o Maior Elemento: Dado um vetor de 12 números, encontre e imprima o maior elemento presente no vetor.
+8	4	Encontrar o Menor Elemento: Dado um vetor de 15 números, encontre e imprima o menor elemento presente no vetor.
+9	4	Busca Simples no Vetor: Crie um vetor de 7 números. Peça ao usuário para digitar um número e verifique se esse número está presente no vetor. Informe "Encontrado" ou "Não encontrado".
+10	4	Filtrar Números Positivos: Crie um vetor de 10 números (podem ser positivos, negativos ou zero). Crie um novo vetor contendo apenas os números positivos do vetor original. Imprima o novo vetor.
+11	4	Preencher e Imprimir Matriz 3x3: Crie uma matriz 3x3 de números inteiros. Peça ao usuário para preencher todos os elementos da matriz e, em seguida, imprima a matriz em formato de grade.
+12	4	Soma dos Elementos da Matriz: Dada uma matriz 2x4 de números, calcule e imprima a soma de todos os seus elementos.
+13	4	Elementos da Diagonal Principal: Para uma matriz quadrada 4x4, imprima apenas os elementos da diagonal principal.
+14	4	Elementos da Diagonal Secundária: Para uma matriz quadrada 3x3, imprima apenas os elementos da diagonal secundária.
+15	4	Matriz Transposta: Dada uma matriz 2x3, crie e imprima sua matriz transposta (que terá dimensão 3x2).
+16	4	Maior Elemento da Matriz: Dada uma matriz 3x3, encontre e imprima o maior elemento presente na matriz.
+17	4	Soma de uma Linha Específica: Crie uma matriz 4x4. Peça ao usuário qual linha ele deseja somar (índice de 0 a 3) e, em seguida, calcule e imprima a soma dos elementos dessa linha.
+18	4	Soma de uma Coluna Específica: Crie uma matriz 3x5. Peça ao usuário qual coluna ele deseja somar (índice de 0 a 4) e, em seguida, calcule e imprima a soma dos elementos dessa coluna.
+19	4	Contar Ocorrências na Matriz: Dada uma matriz 5x5. Peça ao usuário um número e conte quantas vezes esse número aparece na matriz.
+20	4	Gerar Matriz com Padrão: Crie uma matriz 3x3 onde cada elemento M[i][j] seja a soma de seus índices i + j. Imprima a matriz.
+21	4	Arrays: Intersecção de Vetores: Dados dois vetores de números inteiros, vetor1 e vetor2, encontre e imprima todos os elementos que são comuns a ambos os vetores (sem duplicatas no resultado).
+22	4	Arrays: Eliminar Duplicatas: Dado um vetor com números inteiros (que pode conter duplicatas), crie um novo vetor contendo apenas os elementos únicos do vetor original. Imprima o novo vetor.
+23	4	Arrays: Ordenação (Bubble Sort/Selection Sort): Implemente uma função ou rotina que receba um vetor de números inteiros e o ordene em ordem crescente utilizando um algoritmo de ordenação simples (como Bubble Sort ou Selection Sort). Imprima o vetor ordenado.
+24	4	Matrizes: Soma de Duas Matrizes: Dadas duas matrizes 2x2, matrizA e matrizB. Crie uma terceira matriz matrizC que seja o resultado da soma de matrizA com matrizB (elemento a elemento). Imprima matrizC.
+25	4	Matrizes: Multiplicação de Matriz por Escalar: Dada uma matriz 3x2 e um número escalar inteiro k. Crie uma nova matriz resultante da multiplicação de todos os elementos da matriz original por k. Imprima a nova matriz.
