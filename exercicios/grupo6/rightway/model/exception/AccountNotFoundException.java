@@ -1,4 +1,4 @@
-package exercicios.grupo6;
+package exercicios.grupo6.rightway.model.exception;
 
 public class AccountNotFoundException extends Exception {
     public AccountNotFoundException(String cpf) {

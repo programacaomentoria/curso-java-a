@@ -1,11 +1,8 @@
-package exercicios.grupo6;
+package exercicios.grupo6.rightway.model;
 
 public class Agencia {
     private int numeroAgencia;
     private String nomeAgencia;
-    private Account[] contas;
-
-    private Double saldoTotalAgencia;
 
     public Agencia(int numeroAgencia, String nomeAgencia) {
         this.numeroAgencia = numeroAgencia;

@@ -1,18 +1,18 @@
-package exercicios.grupo6;
+package exercicios.grupo6.rightway.model.io;
 
 public class FileUtil {
-    public static void appendLineToFile(String fileName, String line) throws java.io.IOException {
-        java.io.FileWriter fileWriter = new java.io.FileWriter(fileName, java.nio.charset.StandardCharsets.UTF_8, true);
+    public static void adicionarDadosNoArquivo(String nomeArquivo, String linhaNoArquivo) throws java.io.IOException {
+        java.io.FileWriter fileWriter = new java.io.FileWriter(nomeArquivo, java.nio.charset.StandardCharsets.UTF_8, true);
         java.io.BufferedWriter bufferedWriter = new java.io.BufferedWriter(fileWriter);
-        bufferedWriter.write(line);
+        bufferedWriter.write(linhaNoArquivo);
         bufferedWriter.newLine();
         bufferedWriter.close();
     }
 
-    public static String[] loadLinesFromFile(String fileName) {
+    public static String[] obterLinhasDoArquivo(String nomeArquivo) {
         java.util.List<String> lines = new java.util.ArrayList<>();
         try {
-            java.io.FileReader fileReader = new java.io.FileReader(fileName, java.nio.charset.StandardCharsets.UTF_8);
+            java.io.FileReader fileReader = new java.io.FileReader(nomeArquivo, java.nio.charset.StandardCharsets.UTF_8);
             java.io.BufferedReader bufferedReader = new java.io.BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
