@@ -87,7 +87,6 @@ public class AccountProgramManager {
                     //RECUPERAR OS DADOS DA CONTA
                     System.out.println("Bem vindo de volta, " + contaCarregada.getNomeDaConta() + "!");
                 }
-                // scanner.close(); // Evitar fechar o scanner aqui para não fechar System.in
             }
             return contaReconhecida;
         }

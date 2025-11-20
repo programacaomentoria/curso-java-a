@@ -41,7 +41,7 @@ public class AccountManager {
             return false;
         }
 
-        Account novaConta = new Account(cpf, nomeDaConta, 0.0, true);
+        Account novaConta = new Account(nomeDaConta, cpf, 0.0, true);
         return this.gerenciador.salvarConta(novaConta);
     }
 

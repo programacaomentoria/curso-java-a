@@ -46,19 +46,26 @@ public class SistemaBancario {
                 } catch (IOException e) {
                     // Arquivo não existe ainda, tudo bem
                 }
-                
+
                 if (cpfExiste) {
                     System.out.println("CPF já cadastrado no sistema!");
                     continue;
                 }
-                
+
                 System.out.print("Digite o nome: ");
                 String nome = scanner.nextLine();
-                
+
+                boolean contemPontoVirgula = false;
+                contemPontoVirgula = cpf.contains(";") || nome.contains(";");
+                if (contemPontoVirgula) {
+                    System.out.println("CPF ou nome inválido! Não utilize o caractere ';' ");
+                    continue;
+                }
+
                 // Gravar no arquivo
                 try {
                     BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoContas, true));
-                    writer.write("CPF:" + cpf + ";NOME:" + nome + ";SALDO:0.00\n");
+                    writer.write("CPF:" + cpf.trim() + ";NOME:" + nome.trim() + ";SALDO:0.00\n");
                     writer.close();
                     System.out.println("Conta cadastrada com sucesso!");
 
@@ -87,11 +94,17 @@ public class SistemaBancario {
                     BufferedReader reader = new BufferedReader(new FileReader(arquivoContas));
                     String linha;
                     while ((linha = reader.readLine()) != null) {
+
+                        // System.out.println(linha);
+
+                        // CPF:012345
+                        // NOME: Rodrigo Fischer
+                        // SALDO:56.99
                         if (linha.startsWith("CPF:" + cpfLogin + ";")) {
                             clienteEncontrado = true;
                             String[] partes = linha.split(";");
-                            nomeCliente = partes[1].substring(5); // Remove "NOME:"
-                            saldoAtual = Double.parseDouble(partes[2].substring(6)); // Remove "SALDO:"
+                            nomeCliente = partes[1].substring(5).trim(); // Remove "NOME:"
+                            saldoAtual = Double.parseDouble(partes[2].substring(6).trim()); // Remove "SALDO:"
                             break;
                         }
                     }
@@ -265,12 +278,13 @@ public class SistemaBancario {
                         }
                         
                         System.out.println("==========================================");
-                        System.out.println("                            SALDO        " + String.format("%.2f", saldoAtual) + "+");
+                        System.out.println("                            SALDO     " + String.format("%.2f", saldoAtual) + "+");
                         System.out.print("Pressione Enter para voltar ao menu...");
                         scanner.nextLine();
                         
                     } else {
-                        System.out.println("Opção inválida!");
+                        // System.out.println("Opção inválida!");
+                        System.err.println("opcao inválida");
                     }
                 }
                 
